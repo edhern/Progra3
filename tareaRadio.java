@@ -16,7 +16,7 @@ public class tareaRadio {
         System.out.println("Circunferencia de la esfera = " + DatosAlmacenados);
 
         DatosAlmacenados = Esfera.MetodoVolumen(Radio);
-        System.out.println("Volumen de la esfera = "+ DatosAlmacenados);
+        System.out.println("Volumen de la ESFERA = "+ DatosAlmacenados);
 
         DatosAlmacenados = Esfera.MetodoParaDiametro(Radio);
         System.out.println("Diametro de la esfera = " + DatosAlmacenados);
