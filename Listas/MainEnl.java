@@ -15,7 +15,9 @@ public class MainEnl {
             }else if(Integer.parseInt(D)==2){
                 All();
             }else if(Integer.parseInt(D)==3){
-                One();
+                BuscarDatos1a1();
+            }else if(Integer.parseInt(D)==4){
+                EliminarDato();
             }else {
                 System.out.println("Opción invalida");
             }
@@ -31,6 +33,10 @@ public class MainEnl {
         1) INGRESAR USUARIO
         2) VER USUARIOS
         3) BUSCAR USUARIO
+        4) ELIMINAR DATOS
+        5) ELIMINAR AL INICIO
+        6) ELIMINAR AL FINAL
+        7) AGREGAR AL FINAL
         
         """);
     }
@@ -45,10 +51,31 @@ public class MainEnl {
         lista.showList();
     }
 
-    public static void One(){
+    public static void BuscarDatos1a1(){
         System.out.println("INGRESE SU NOMBRE");
         String name=o.nextLine();
         lista.MostrarCadaUnoDeLosUsuarios(name);
+    }
+    public static void EliminarDato(){
+        System.out.println("INGRESE SU NOMBRE");
+        String name=o.nextLine();
+        lista.eliminarElemento(name);
+    }  
+
+    public static void AgregarDatoAlFinal(){
+        System.out.println("INGRESE SU NOMBRE");
+        String name=o.nextLine();
+        lista.agregarAlendal();
+    }
+    public static void EliminarElementoAlInicio(){
+        System.out.println("INGRESE SU NOMBRE");
+        String name=o.nextLine();
+        lista.eliminarAlInicio(name);
+    }
+    public static void EliminarDatoAlFinal(){
+        System.out.println("INGRESE SU NOMBRE");
+        String name=o.nextLine();
+        lista.eliminarAlFinal(name);
     }
     
 }

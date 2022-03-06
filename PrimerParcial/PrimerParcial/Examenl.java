@@ -9,6 +9,7 @@ public class Examenl {
             int data = IngresarValores.nextInt();
             int[] primerArry = new int[data];
             for(int i = 0; i < primerArry.length; i++)
+            
             {
             int newValue = IngresarValores.nextInt();
                 primerArry[i] = newValue;
@@ -36,7 +37,9 @@ public class Examenl {
             int Orden,Elemento, I;
             String save="";
             String ContieneArreglo="";
+
                 for (Elemento=0;Elemento<arreglo3.length;Elemento++) {
+                    
                     for(Orden=1;Orden<arreglo3.length;Orden++) {
                         if(arreglo3[Orden]<arreglo3[Orden-1]){
                             I=arreglo3[Orden];

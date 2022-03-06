@@ -32,4 +32,68 @@ public class ArreglosListas {
             auxiliar1=auxiliar1.siguiente;
         }
     }
+    public void eliminarElemento(String elemento){
+        if(start.dato.equals(elemento)){
+            start = start.siguiente;
+        }else{
+            Nodo aux = start;
+            while(aux.siguiente != null){
+                if(aux.siguiente.dato.equals(elemento)){
+                    aux.siguiente = aux.siguiente.siguiente;
+                    break;
+                }
+                aux = aux.siguiente;
+            }
+        }
+    }
+    public boolean estaVacia(){
+        if(this.start == null){
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+
+public void agregarAlendal(int elemento){
+        if(!estaVacia()){
+            this.end.siguiente = new Nodo(elemento);
+            this.end = this.end.siguiente;
+        }else{
+            this.start=this.end = new Nodo(elemento);
+        }
+    }
+
+
+
+
+
+public String eliminarAlstart(){
+        String dato = this.start.dato;
+        if(this.start == this.end){
+            this.start=this.end=null;
+        }else{
+            this.start = this.start.siguiente;
+        }
+        return dato;
+    }
+   
+    public String eliminarAlendal(){
+        String dato = this.end.dato;
+        if(this.start == this.end){
+            this.start=this.end=null;
+        }else{
+            Nodo aux=start;
+            while(aux.siguiente!=end){
+                aux=aux.siguiente;
+            }
+            end=aux;
+            end.siguiente = null;
+        }
+        return dato;
+    }
+    
 }
+
