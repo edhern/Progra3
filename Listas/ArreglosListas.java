@@ -57,7 +57,7 @@ public class ArreglosListas {
 
 
 
-public void agregarAlendal(int elemento){
+public void agregarAlendal(String elemento){
         if(!estaVacia()){
             this.end.siguiente = new Nodo(elemento);
             this.end = this.end.siguiente;

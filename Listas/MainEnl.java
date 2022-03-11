@@ -18,6 +18,12 @@ public class MainEnl {
                 BuscarDatos1a1();
             }else if(Integer.parseInt(D)==4){
                 EliminarDato();
+            }else if(Integer.parseInt(D)==5){
+                EliminarElementoAlInicio();
+            }else if(Integer.parseInt(D)==6){
+                EliminarDatoAlFinal();
+            }else if(Integer.parseInt(D)==7){
+                AgregarDatoAlFinal();
             }else {
                 System.out.println("Opción invalida");
             }
@@ -63,19 +69,14 @@ public class MainEnl {
     }  
 
     public static void AgregarDatoAlFinal(){
-        System.out.println("INGRESE SU NOMBRE");
         String name=o.nextLine();
-        lista.agregarAlendal();
+        lista.agregarAlendal(name);
     }
     public static void EliminarElementoAlInicio(){
-        System.out.println("INGRESE SU NOMBRE");
-        String name=o.nextLine();
-        lista.eliminarAlInicio(name);
+        lista.eliminarAlstart();
     }
     public static void EliminarDatoAlFinal(){
-        System.out.println("INGRESE SU NOMBRE");
-        String name=o.nextLine();
-        lista.eliminarAlFinal(name);
+        lista.eliminarAlendal();
     }
     
 }
